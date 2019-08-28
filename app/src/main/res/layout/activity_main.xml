@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:weightSum="1"
+       android:background="@color/colorPrimaryDark">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight=".2"
+           android:text="REGISTRATION"
+           android:textSize="50dp"
+           android:gravity="center"
+           android:textColor="@color/colorAccent"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight=".1"
+           android:weightSum="10">
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="3"
+               android:gravity="center"
+               android:textColor="@color/colorAccent"
+               android:textSize="25dp"
+               android:text="Name:"
+               />
+           <EditText
+               android:id="@+id/name"
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="7"
+               android:maxLength="32"
+               android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+               android:hint="enter name min 6char"/>
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight=".1"
+           android:weightSum="10">
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="3"
+               android:gravity="center"
+               android:textColor="@color/colorAccent"
+               android:textSize="25dp"
+               android:text="Phone:"
+               />
+           <EditText
+               android:id="@+id/phone"
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="7"
+               android:inputType="number"
+               android:maxLength="10"
+               android:hint="enter phone number 10 digits"/>
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight=".1"
+           android:weightSum="10">
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="3"
+               android:gravity="center"
+               android:textColor="@color/colorAccent"
+               android:textSize="25dp"
+               android:text="Email:"
+               />
+           <EditText
+               android:id="@+id/email"
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="7"
+               android:maxLength="40"
+               android:inputType="textEmailAddress"
+               android:hint="enter email"/>
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight=".1"
+           android:weightSum="10">
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="4"
+               android:gravity="center"
+               android:textColor="@color/colorAccent"
+               android:textSize="25dp"
+               android:text="Password:"
+               />
+           <EditText
+               android:id="@+id/password"
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="6"
+               android:maxLength="32"
+               android:inputType="textPassword"
+               android:hint="enter password"/>
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight=".1"
+           android:weightSum="10">
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="3"
+               android:gravity="center"
+               android:textColor="@color/colorAccent"
+               android:textSize="25dp"
+               android:text="Gender:"
+               />
+          <RadioGroup
+              android:id="@+id/radio"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:layout_weight="7"
+              android:weightSum="8">
+              <RadioButton android:id="@+id/radio_pirates"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="4"
+                  android:text="Male"
+                  android:onClick="onRadioButtonClicked"/>
+              <RadioButton android:id="@+id/radio_ninjas"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="4"
+                  android:text="Female"
+                  android:onClick="onRadioButtonClicked"/>
+          </RadioGroup>
+
+       </LinearLayout>
+
+<Button
+    android:id="@+id/btn"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:text="Submit"
+    android:layout_weight=".1"
+    android:layout_gravity="center"/>
+
+       <Space
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight=".2"/>
+
+
+   </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
